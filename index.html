@@ -3,134 +3,159 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="4b6o0t — Independent cybersecurity and mobile application security researcher.">
-<title>4b6o0t | Security Researcher</title>
+<meta name="theme-color" content="#050505">
+<meta name="description" content="Abdul Basith K.P. — 4b6o0t, Bug Bounty Hunter and Mobile Security Researcher.">
+<title>4b6o0t | Bug Bounty Hunter</title>
 <style>
-:root {
-  color-scheme: dark;
-  --bg: #050505;
-  --panel: #101010;
-  --line: #303030;
-  --text: #f5f5f5;
-  --muted: #a0a0a0;
-}
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--text);
-  font: 16px/1.7 -apple-system, BlinkMacSystemFont, Arial, sans-serif;
-}
-a { color: var(--text); }
-header {
-  padding: 20px 6%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid var(--line);
-}
-.brand { font-weight: 800; letter-spacing: 3px; }
-nav { display: flex; gap: 20px; flex-wrap: wrap; }
-nav a { color: var(--muted); text-decoration: none; font-size: 14px; }
-main { max-width: 1000px; width: 88%; margin: auto; }
-.hero { min-height: 72vh; display: flex; flex-direction: column; justify-content: center; }
-.eyebrow { color: var(--muted); letter-spacing: 4px; font-size: 12px; }
-h1 { font-size: clamp(48px, 10vw, 100px); line-height: 1.05; margin: 18px 0; letter-spacing: -4px; }
-h1 span { color: #858585; }
-h2 { font-size: 27px; margin: 0 0 20px; }
-p { color: var(--muted); }
-.actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
-.btn { display: inline-block; border: 1px solid #777; padding: 10px 17px; text-decoration: none; border-radius: 5px; }
-.btn.primary { background: white; color: black; border-color: white; }
-section { padding: 45px 0; border-top: 1px solid var(--line); }
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; }
-.card { padding: 22px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; }
-.card h3 { margin-top: 0; }
-.tag { display: inline-block; border: 1px solid #444; padding: 3px 9px; margin: 4px 4px 4px 0; border-radius: 20px; color: #ccc; font-size: 13px; }
-footer { border-top: 1px solid var(--line); padding: 25px 6%; color: var(--muted); text-align: center; }
-@media(max-width:600px) {
-  header { align-items: flex-start; flex-direction: column; gap: 12px; }
-  h1 { letter-spacing: -2px; }
-  .hero { min-height: 65vh; }
-}
+:root{color-scheme:dark;--bg:#050505;--panel:#101010;--line:#292929;--text:#f5f5f5;--muted:#a0a0a0}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.7 -apple-system,BlinkMacSystemFont,Arial,sans-serif}
+a{color:var(--text)}
+header{max-width:1050px;width:90%;margin:auto;padding:18px 0;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line)}
+.brand{font-weight:900;letter-spacing:3px;text-decoration:none}
+nav{display:flex;gap:17px;flex-wrap:wrap}
+nav a{font-size:12px;color:var(--muted);text-decoration:none}
+main{max-width:900px;width:90%;margin:auto}
+.hero{padding:78px 0 58px}
+.eyebrow{font-size:11px;letter-spacing:3px;color:#aaa}
+h1{font-size:clamp(43px,8vw,76px);line-height:1.06;letter-spacing:-3px;margin:14px 0}
+h1 span{color:#888}
+h2{font-size:23px;margin:0 0 17px}
+h3{font-size:16px;margin:0 0 8px}
+p{color:var(--muted);margin:8px 0 14px}
+section{padding:30px 0;border-top:1px solid var(--line);scroll-margin-top:20px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.btn{display:inline-block;padding:8px 13px;border:1px solid #555;border-radius:5px;text-decoration:none;font-size:13px}
+.btn.primary{background:#fff;color:#000;border-color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:12px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:17px}
+.card p{font-size:13px}
+.tags{display:flex;flex-wrap:wrap;gap:7px}
+.tag{font-size:12px;border:1px solid #383838;border-radius:20px;padding:3px 10px;color:#ccc}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:12px;margin-top:24px}
+.stat{border:1px solid var(--line);padding:14px;border-radius:7px}
+.stat strong{display:block;font-size:23px}
+.stat span{font-size:12px;color:var(--muted)}
+footer{border-top:1px solid var(--line);margin-top:25px;padding:22px 5%;text-align:center;color:#888;font-size:12px}
+@media(max-width:540px){header{align-items:flex-start;flex-direction:column;gap:10px}.hero{padding-top:55px}h1{letter-spacing:-2px}}
 </style>
 </head>
 <body>
 <header>
-  <a class="brand" href="#" style="text-decoration:none">4B6O0T</a>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Expertise</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<a class="brand" href="#">4B6O0T</a>
+<nav>
+<a href="#about">ABOUT</a>
+<a href="#expertise">EXPERTISE</a>
+<a href="#research">RESEARCH</a>
+<a href="#projects">PROJECTS</a>
+<a href="#contact">CONTACT</a>
+</nav>
 </header>
 
 <main>
-  <div class="hero">
-    <div class="eyebrow">INDEPENDENT SECURITY RESEARCHER</div>
-    <h1>ABDUL BASITH <span>K.P.</span></h1>
-    <p>Mobile Security Researcher · Bug Bounty Hunter</p>
-    <p>Exploring application security, reverse engineering and vulnerabilities — one finding at a time.</p>
-    <div class="actions">
-      <a class="btn primary" href="https://github.com/b4sith-sec">Explore GitHub ↗</a>
-      <a class="btn" href="#projects">View Projects ↓</a>
-    </div>
-  </div>
+<section class="hero" style="border:0">
+<div class="eyebrow">INDEPENDENT SECURITY RESEARCHER</div>
+<h1>ABDUL BASITH <span>K.P.</span></h1>
+<h3>Bug Bounty Hunter · Mobile Security Researcher</h3>
+<p>Finding vulnerabilities. Validating impact. Building safer applications.</p>
+<p>Focused on Android, iOS, Web and API security, reverse engineering and responsible disclosure.</p>
+<div class="actions">
+<a class="btn primary" href="https://github.com/b4sith-sec">GitHub ↗</a>
+<a class="btn" href="https://x.com/abdulbasith1205" target="_blank" rel="noopener noreferrer">Follow on X ↗</a>
+<a class="btn" href="#research">Explore Research ↓</a>
+</div>
+<div class="stats">
+<div class="stat"><strong>20+</strong><span>Duplicate reports*</span></div>
+<div class="stat"><strong>4</strong><span>Security domains</span></div>
+<div class="stat"><strong>1</strong><span>Research mindset</span></div>
+</div>
+<p style="font-size:11px">*Duplicate-report figure supplied by the researcher; it does not represent accepted findings or bounty awards.</p>
+</section>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I focus on Android application security, iOS security, web application testing and API penetration testing. My research interests include reverse engineering, dynamic instrumentation, vulnerability validation and responsible disclosure.</p>
-    <p>This portfolio documents my projects, security experiments and published research.</p>
-  </section>
+<section id="about">
+<h2>About Me</h2>
+<p>I'm Abdul Basith K.P., known as 4b6o0t, a bug bounty hunter and security researcher interested in identifying and responsibly reporting application vulnerabilities.</p>
+<p>My work focuses on mobile application testing, reverse engineering, web vulnerabilities, API security and practical security tooling.</p>
+</section>
 
-  <section id="skills">
-    <h2>Technical Expertise</h2>
-    <div>
-      <span class="tag">Android Security</span>
-      <span class="tag">iOS Security</span>
-      <span class="tag">API Pentesting</span>
-      <span class="tag">Web Security</span>
-      <span class="tag">Reverse Engineering</span>
-      <span class="tag">Frida</span>
-      <span class="tag">Burp Suite</span>
-      <span class="tag">JADX</span>
-      <span class="tag">MobSF</span>
-      <span class="tag">Ghidra</span>
-    </div>
-  </section>
+<section id="expertise">
+<h2>Technical Expertise</h2>
+<div class="tags">
+<span class="tag">Android Security</span>
+<span class="tag">iOS Security</span>
+<span class="tag">Web Application Security</span>
+<span class="tag">API Pentesting</span>
+<span class="tag">Bug Bounty Hunting</span>
+<span class="tag">Reverse Engineering</span>
+<span class="tag">Frida</span>
+<span class="tag">JADX</span>
+<span class="tag">Burp Suite</span>
+<span class="tag">MobSF</span>
+<span class="tag">Ghidra</span>
+<span class="tag">IDA Pro</span>
+</div>
+</section>
 
-  <section id="projects">
-    <h2>Selected Projects</h2>
-    <div class="grid">
-      <article class="card">
-        <h3>Gu3ssWeak</h3>
-        <p>A deliberately vulnerable Android application for practicing mobile application security testing.</p>
-        <a href="https://github.com/b4sith-sec/Gu3ssWeak">View repository ↗</a>
-      </article>
-      <article class="card">
-        <h3>Security Research</h3>
-        <p>Explore my repositories, security tooling, experiments and technical proof-of-concepts.</p>
-        <a href="https://github.com/b4sith-sec?tab=repositories">Browse projects ↗</a>
-      </article>
-      <article class="card">
-        <h3>Write-ups</h3>
-        <p>Technical analyses of application security issues, testing methodologies and research findings.</p>
-        <a href="https://github.com/b4sith-sec?tab=repositories">Read research ↗</a>
-      </article>
-    </div>
-  </section>
+<section id="research">
+<h2>Bug Bounty & Research Programs</h2>
+<p>Selected platforms and companies for security research. Program participation and individual report outcomes vary.</p>
+<div class="grid">
+<article class="card">
+<h3>Google</h3>
+<p>Application, platform and ecosystem security research.</p>
+<a href="https://bughunters.google.com/" target="_blank" rel="noopener noreferrer">Google Bug Hunters ↗</a>
+</article>
+<article class="card">
+<h3>Meesho</h3>
+<p>E-commerce application and web/API security research.</p>
+<a href="https://www.meesho.com/" target="_blank" rel="noopener noreferrer">Official website ↗</a>
+</article>
+<article class="card">
+<h3>Bybit</h3>
+<p>Web application and API security research within authorized scope.</p>
+<a href="https://www.bybit.com/" target="_blank" rel="noopener noreferrer">Official website ↗</a>
+</article>
+<article class="card">
+<h3>Superhuman</h3>
+<p>Email application and mobile security research.</p>
+<a href="https://superhuman.com/" target="_blank" rel="noopener noreferrer">Official website ↗</a>
+</article>
+</div>
+<p style="font-size:12px">Only test assets explicitly covered by the applicable security policy or with written authorization.</p>
+</section>
 
-  <section id="contact">
-    <h2>Connect</h2>
-    <p>For security research, collaboration and professional opportunities.</p>
-    <div class="actions">
-      <a class="btn primary" href="https://github.com/b4sith-sec">GitHub ↗</a>
-      <a class="btn" href="https://www.linkedin.com/">LinkedIn ↗</a>
-    </div>
-  </section>
+<section id="projects">
+<h2>Projects & Publications</h2>
+<div class="grid">
+<article class="card">
+<h3>Gu3ssWeak</h3>
+<p>A deliberately vulnerable Android application for mobile security testing and learning.</p>
+<a href="https://github.com/b4sith-sec/Gu3ssWeak" target="_blank" rel="noopener noreferrer">View project ↗</a>
+</article>
+<article class="card">
+<h3>Security Tools</h3>
+<p>Explore research utilities, repositories and security experiments.</p>
+<a href="https://github.com/b4sith-sec?tab=repositories" target="_blank" rel="noopener noreferrer">Browse repositories ↗</a>
+</article>
+<article class="card">
+<h3>Technical Write-ups</h3>
+<p>Documenting reproducible findings, testing methodology and lessons from security research.</p>
+<a href="https://github.com/b4sith-sec?tab=repositories" target="_blank" rel="noopener noreferrer">Explore publications ↗</a>
+</article>
+</div>
+</section>
+
+<section id="contact">
+<h2>Connect With Me</h2>
+<p>For security research, collaboration and professional opportunities.</p>
+<div class="actions">
+<a class="btn primary" href="https://github.com/b4sith-sec" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+<a class="btn" href="https://x.com/abdulbasith1205" target="_blank" rel="noopener noreferrer">X / Twitter ↗</a>
+<a class="btn" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+</div>
+</section>
 </main>
-<footer>© 2026 Abdul Basith K.P. · 4b6o0t</footer>
+<footer>© 2026 Abdul Basith K.P. · 4b6o0t · Responsible Security Research</footer>
 </body>
 </html>
