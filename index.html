@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="4b6o0t — Independent cybersecurity and mobile application security researcher.">
+<title>4b6o0t | Security Researcher</title>
+<style>
+:root {
+  color-scheme: dark;
+  --bg: #050505;
+  --panel: #101010;
+  --line: #303030;
+  --text: #f5f5f5;
+  --muted: #a0a0a0;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.7 -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+}
+a { color: var(--text); }
+header {
+  padding: 20px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+}
+.brand { font-weight: 800; letter-spacing: 3px; }
+nav { display: flex; gap: 20px; flex-wrap: wrap; }
+nav a { color: var(--muted); text-decoration: none; font-size: 14px; }
+main { max-width: 1000px; width: 88%; margin: auto; }
+.hero { min-height: 72vh; display: flex; flex-direction: column; justify-content: center; }
+.eyebrow { color: var(--muted); letter-spacing: 4px; font-size: 12px; }
+h1 { font-size: clamp(48px, 10vw, 100px); line-height: 1.05; margin: 18px 0; letter-spacing: -4px; }
+h1 span { color: #858585; }
+h2 { font-size: 27px; margin: 0 0 20px; }
+p { color: var(--muted); }
+.actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
+.btn { display: inline-block; border: 1px solid #777; padding: 10px 17px; text-decoration: none; border-radius: 5px; }
+.btn.primary { background: white; color: black; border-color: white; }
+section { padding: 45px 0; border-top: 1px solid var(--line); }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; }
+.card { padding: 22px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; }
+.card h3 { margin-top: 0; }
+.tag { display: inline-block; border: 1px solid #444; padding: 3px 9px; margin: 4px 4px 4px 0; border-radius: 20px; color: #ccc; font-size: 13px; }
+footer { border-top: 1px solid var(--line); padding: 25px 6%; color: var(--muted); text-align: center; }
+@media(max-width:600px) {
+  header { align-items: flex-start; flex-direction: column; gap: 12px; }
+  h1 { letter-spacing: -2px; }
+  .hero { min-height: 65vh; }
+}
+</style>
+</head>
+<body>
+<header>
+  <a class="brand" href="#" style="text-decoration:none">4B6O0T</a>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Expertise</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="eyebrow">INDEPENDENT SECURITY RESEARCHER</div>
+    <h1>ABDUL BASITH <span>K.P.</span></h1>
+    <p>Mobile Security Researcher · Bug Bounty Hunter</p>
+    <p>Exploring application security, reverse engineering and vulnerabilities — one finding at a time.</p>
+    <div class="actions">
+      <a class="btn primary" href="https://github.com/b4sith-sec">Explore GitHub ↗</a>
+      <a class="btn" href="#projects">View Projects ↓</a>
+    </div>
+  </div>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I focus on Android application security, iOS security, web application testing and API penetration testing. My research interests include reverse engineering, dynamic instrumentation, vulnerability validation and responsible disclosure.</p>
+    <p>This portfolio documents my projects, security experiments and published research.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Technical Expertise</h2>
+    <div>
+      <span class="tag">Android Security</span>
+      <span class="tag">iOS Security</span>
+      <span class="tag">API Pentesting</span>
+      <span class="tag">Web Security</span>
+      <span class="tag">Reverse Engineering</span>
+      <span class="tag">Frida</span>
+      <span class="tag">Burp Suite</span>
+      <span class="tag">JADX</span>
+      <span class="tag">MobSF</span>
+      <span class="tag">Ghidra</span>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Selected Projects</h2>
+    <div class="grid">
+      <article class="card">
+        <h3>Gu3ssWeak</h3>
+        <p>A deliberately vulnerable Android application for practicing mobile application security testing.</p>
+        <a href="https://github.com/b4sith-sec/Gu3ssWeak">View repository ↗</a>
+      </article>
+      <article class="card">
+        <h3>Security Research</h3>
+        <p>Explore my repositories, security tooling, experiments and technical proof-of-concepts.</p>
+        <a href="https://github.com/b4sith-sec?tab=repositories">Browse projects ↗</a>
+      </article>
+      <article class="card">
+        <h3>Write-ups</h3>
+        <p>Technical analyses of application security issues, testing methodologies and research findings.</p>
+        <a href="https://github.com/b4sith-sec?tab=repositories">Read research ↗</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Connect</h2>
+    <p>For security research, collaboration and professional opportunities.</p>
+    <div class="actions">
+      <a class="btn primary" href="https://github.com/b4sith-sec">GitHub ↗</a>
+      <a class="btn" href="https://www.linkedin.com/">LinkedIn ↗</a>
+    </div>
+  </section>
+</main>
+<footer>© 2026 Abdul Basith K.P. · 4b6o0t</footer>
+</body>
+</html>
